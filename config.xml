@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.example"
+        versionCode="10"
+        version   = "1.0.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Dota 2 Guides</name>
+
+    <description>
+        Dota 2 Guides
+    </description>
+
+    <author email="likechokolit@gmail.com">
+        Evgeny Nikiforov
+    </author>
+
+    <icon src="img/logo.png" />
+
+</widget>
