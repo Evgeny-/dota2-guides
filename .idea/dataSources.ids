@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.5.29-0ubuntu1" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="05d631b2-d6f3-457b-8428-39cbff758cf4">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost</jdbc-url>
+    <user-name>root</user-name>
+    <schema-pattern>application.* dstream.* laravel.*</schema-pattern>
+    <libraries>
+      <library>
+        <url>jar://$USER_HOME$/PhpStorm-127.100/mysql-connector-java-5.1.22-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/PhpStorm-127.100/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="application"/>
+    <schema name="" catalog="dstream"/>
+    <schema name="" catalog="laravel"/>
+    <table name="city" schema="" catalog="application" type="TABLE">
+      <column name="city_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="country_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="region_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <primary-key name="PRIMARY" columns="city_id"/>
+      <index name="country_id" unique="false" columns="country_id"/>
+      <index name="region_id" unique="false" columns="region_id"/>
+    </table>
+    <table name="company" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="observer" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="emails" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="company" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="email" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="log" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="company" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE="/>
+      <column name="user" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE="/>
+      <column name="text" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="add_by" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="LTE="/>
+      <column name="date" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="orders" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="weight" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="objem" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size1" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size2" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size3" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="package" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="circle" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="from_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="from_street" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_street" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="body_1" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_2" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_3" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_4" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_5" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_6" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_1" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_2" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_3" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="date_left" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="time_left" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="date_load" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="time_load" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="date_upload" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="time_upload" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="pay" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="company" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="documents" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="documents_rits" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="comment" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="who_manage" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="who_change" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="who_create" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="date_update" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="date_create" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="note" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="temperature" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="why_archive" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="package_other" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="contacts_in" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="contacts_out" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="count_place" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="count_belt" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="count_pallets" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="pay_value" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="dop_from_city" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="dop_to_city" sqlType="MEDIUMTEXT" length="16777215" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="probably_coast" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="from_region" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_region" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="more_time" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="rates" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="comment" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="rate" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="from_user" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="from_company" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="templates" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="weight" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="objem" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size1" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size2" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="size3" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="package" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="circle" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="from_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="from_street" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_street" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="body_1" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_2" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_3" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_4" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_5" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="body_6" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_1" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_2" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="load_3" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="pay" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="company" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="temperature" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="package_other" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="contacts_in" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="contacts_out" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="count_place" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="count_belt" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="count_pallets" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="pay_value" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="dop_from_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="dop_to_city" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="probably_coast" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="from_region" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="to_region" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="application" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="wp_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="need_secret" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
+      <column name="secret_word" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="count_try" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="banned" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
+      <column name="need_user_agent" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
+      <column name="time_banned" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="company_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="group" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="bets" schema="" catalog="dstream" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="game" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="team" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="balls" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="result" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="games" schema="" catalog="dstream" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="team1" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="team2" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="time" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="result" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="tourney" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tourney" schema="" catalog="dstream" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="player" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users" schema="" catalog="dstream" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="lastSeen" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="avatar" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="balls" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="visits" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="users2" schema="" catalog="dstream" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="lastSeen" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="avatar" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="name" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="balls" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="appgroups" schema="" catalog="laravel" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="tid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="laravel_migrations" schema="" catalog="laravel" type="TABLE">
+      <column name="bundle" sqlType="VARCHAR" length="50" precision="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="batch" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="bundle,name"/>
+    </table>
+    <table name="users" schema="" catalog="laravel" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="avatar" sqlType="VARCHAR" length="200" precision="0" nullable="false" jdbcType="12"/>
+      <column name="uid" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

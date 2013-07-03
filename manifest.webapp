@@ -1,0 +1,13 @@
+{
+  "name": "Dota 2 Guides",
+  "description": "Dota 2 heroes descriptions",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/logo.png"
+  },
+  "developer": {
+    "name": "Evgeny Nikiforov",
+    "email": "likechokolit@gmail.com"
+  },
+  "default_locale": "en"
+}

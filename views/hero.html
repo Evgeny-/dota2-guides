@@ -1,0 +1,57 @@
+<div id="hero-header">
+    <div ng-click="back()" class="back"><b>&lt;</b></div>
+    <div class="name">{{hero.name}}</div>
+</div>
+
+<div id="hero">
+    <img class="hero-image" ng-src="http://media.steampowered.com/apps/dota2/images/heroes/{{heroName}}_full.png">
+    <div class="hero-menu">
+        <div class="info" ng-class="{'active':tab=='info'}" ng-click="tab='info'">Information</div>
+        <div class="skills" ng-class="{'active':tab=='skills'}" ng-click="tab='skills'">Skills</div>
+    </div>
+
+    <div class="info" ng-show="tab == 'info'" ng-animate="'animate'">
+
+        <div class="dname">Attributes</div>
+        <table>
+            <tr>
+                <td>
+                    <div class="params">
+                        <div><i class="icon-attack"></i> {{hero.attribs.dmg.min}} - {{hero.attribs.dmg.max}}</div>
+                        <div><i class="icon-armor"></i> {{hero.attribs.armor}}</div>
+                        <div><i class="icon-speed"></i> {{hero.attribs.ms}}</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="attribs">
+                        <div><i class="icon-str"></i> {{hero.attribs.str.b}} <span class="adding">+{{hero.attribs.str.g}}</span></div>
+                        <div><i class="icon-agi"></i> {{hero.attribs.agi.b}} <span class="adding">+{{hero.attribs.agi.g}}</span></div>
+                        <div><i class="icon-int"></i> {{hero.attribs.int.b}} <span class="adding">+{{hero.attribs.int.g}}</span></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="dname">Roles</div>
+        <div class="roles">{{hero.roles_l.join(', ')}}</div>
+
+        <div class="dname">Biography</div>
+        <p>{{hero.bio}}</p>
+    </div>
+
+    <div class="skills" ng-show="tab == 'skills'" ng-animate="'animate'">
+        <div ng-repeat="(skillName, skill) in hero.abilities">
+            <div class="dname">{{skill.dname}}</div>
+            <table>
+                <tr>
+                    <td><img ng-src="http://media.steampowered.com/apps/dota2/images/abilities/{{skillName}}_hp1.png" class="image"></td>
+                    <td><div class="desc">{{skill.desc}}</div></td>
+                </tr>
+            </table>
+
+            <div class="affects" ng-bind-html-unsafe="skill.affects"></div>
+            <div class="attrib" ng-bind-html-unsafe="skill.attrib"></div>
+            <div class="cmb" ng-bind-html-unsafe="skill.cmb"></div>
+        </div>
+    </div>
+</div>

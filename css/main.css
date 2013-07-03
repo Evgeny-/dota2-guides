@@ -1,0 +1,293 @@
+body {
+  margin: 0px;
+  background: #242728;
+  padding: 0;
+  font-family: "Droid Sans";
+  font-size: 14px;
+}
+#footer {
+  color: #666;
+  padding: 15px 0 5px;
+  font-size: 12px;
+  text-align: center;
+}
+.loading {
+  height: 300px;
+  width: 100%;
+  line-height: 300px;
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+}
+#groups-header {
+  background-color: #222222;
+  background: -webkit-linear-gradient(90deg, #111111 0, #222222 100%);
+  background: -moz-linear-gradient(90deg, #111111 0, #222222 100%);
+  background: -ms-linear-gradient(90deg, #111111 0, #222222 100%);
+  background: -o-linear-gradient(90deg, #111111 0, #222222 100%);
+  background: linear-gradient(0deg, #111111 0, #222222 100%);
+  font-size: 0;
+  position: fixed;
+  top: -1px;
+  left: 0px;
+  width: 100%;
+  border-bottom: 1px solid #444;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+#groups-header div {
+  font-size: 16px;
+  text-shadow: 1px 1px 0 #000;
+  padding: 12px 0;
+  border-right: 1px solid #333;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  color: #ddd;
+  cursor: pointer;
+}
+#groups-header div:last-of-type {
+  border-right: none;
+}
+#groups-header div:hover {
+  background: #000;
+}
+#groups-header div.active,
+#groups-header div.active:hover {
+  box-shadow: 0 0 15px #000 inset;
+  background: #333;
+}
+#groups-header:last-child {
+  border-right: none;
+}
+.header-push {
+  height: 44px;
+}
+.hero-group {
+  text-align: center;
+}
+.hero-group .hero-preview {
+  display: inline-block;
+  width: 28%;
+  margin: 4px 4px 0 4px;
+  border: 3px solid #000;
+  background: #000;
+  font-size: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero-group .hero-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.hero-group .hero-preview:active,
+.hero-group .hero-preview:hover {
+  border: 3px solid #17adff;
+  background: #17adff;
+}
+.hero-group .hero-preview:active img,
+.hero-group .hero-preview:hover img {
+  opacity: 0.8;
+}
+#hero-header {
+  background-color: #000000;
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000000 90%);
+  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000000 90%);
+  background: -ms-linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000000 90%);
+  background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000000 90%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0, #000000 90%);
+  font-size: 0;
+  position: fixed;
+  top: -1px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+}
+#hero-header div {
+  font-size: 16px;
+  text-shadow: 1px 1px 0 #000;
+  padding: 8px 0 10px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+}
+#hero-header div.back {
+  width: 10%;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 2px 8px 2px 4px;
+  float: left;
+}
+#hero-header div.back:hover,
+#hero-header div.back:active {
+  background: rgba(0, 0, 0, 0.4);
+}
+#hero-header div.name {
+  width: 80%;
+  text-align: right;
+}
+#hero {
+  font-size: 0;
+}
+#hero table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#hero table tr,
+#hero table td {
+  vertical-align: middle;
+}
+#hero .hero-image {
+  width: 100%;
+}
+#hero .hero-menu {
+  width: 100%;
+  background: #181818;
+}
+#hero .hero-menu div {
+  width: 49.95%;
+  overflow: hidden;
+  font-size: 14px;
+  text-align: center;
+  color: #ddd;
+  display: inline-block;
+  padding: 10px 0;
+  cursor: pointer;
+  box-shadow: -1px 0 0 #222222;
+  border-bottom: 2px solid #181818;
+}
+#hero .hero-menu div.active {
+  border-bottom: 2px solid #17adff;
+}
+#hero .info,
+#hero .skills {
+  font-size: 14px;
+  padding: 10px;
+}
+#hero .skills {
+  color: #ddd;
+}
+#hero .skills > div {
+  margin-bottom: 20px;
+}
+#hero .skills .dname {
+  color: #fff;
+  border-bottom: 2px solid #043443;
+  padding-bottom: 4px;
+  margin: 0 0 4px;
+}
+#hero .skills .image {
+  max-height: 70px;
+  border-radius: 4px;
+  border: 3px solid #000;
+}
+#hero .skills .desc {
+  font-size: 12px;
+  color: #ccc;
+  padding: 5px;
+}
+#hero .skills .attrib,
+#hero .skills .affects {
+  font-size: 13px;
+  color: #7b9cab;
+}
+#hero .skills .attrib .attribVal,
+#hero .skills .affects .attribVal {
+  color: #eee;
+}
+#hero .skills .cmb {
+  font-size: 13px;
+  line-height: 16px;
+}
+#hero .skills .cmb img {
+  height: 14px;
+  width: 14px;
+  border: 2px solid #111;
+  margin-bottom: -3px;
+  border-radius: 3px;
+}
+#hero .info p {
+  text-align: justify;
+  color: #ddd;
+  text-indent: 10px;
+  font-size: 14px;
+  margin: 0 10px;
+}
+#hero .info table,
+#hero .info .roles {
+  margin-bottom: 15px;
+}
+#hero .info .roles {
+  color: #7b9cab;
+}
+#hero .info .attribs,
+#hero .info .params {
+  color: #eee;
+  font-size: 0px;
+}
+#hero .info .attribs > div,
+#hero .info .params > div {
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: top;
+  text-align: left;
+}
+#hero .info .attribs > div .adding,
+#hero .info .params > div .adding {
+  vertical-align: top;
+  display: inline-block;
+  color: #7b9cab;
+}
+#hero .info .dname {
+  color: #fff;
+  border-bottom: 2px solid #043443;
+  padding-bottom: 4px;
+  margin: 0 0 4px;
+}
+.icon-int {
+  background: url('../img/int.png');
+}
+.icon-str {
+  background: url('../img/str.png');
+}
+.icon-agi {
+  background: url('../img/agi.png');
+}
+.icon-armor {
+  background: url('../img/armor.png');
+}
+.icon-attack {
+  background: url('../img/attack.png');
+}
+.icon-speed {
+  background: url('../img/speed.png');
+}
+[class*="icon"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+.animate-show,
+.animate-hide,
+.animate-enter,
+.animate-leave {
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.animate-show.animate-show-active,
+.animate-hide,
+.animate-enter.animate-enter-active,
+.animate-leave {
+  opacity: 1;
+}
+.animate-hide.animate-hide-active,
+.animate-show,
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+}

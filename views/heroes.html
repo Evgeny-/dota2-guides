@@ -1,0 +1,18 @@
+<div id="groups-header">
+    <div ng-click="setGroup(0)" ng-class="{'active' : (group == 0) }">Strange</div>
+    <div ng-click="setGroup(1)" ng-class="{'active' : (group == 1) }">Agility</div>
+    <div ng-click="setGroup(2)" ng-class="{'active' : (group == 2) }">Intellect</div>
+</div>
+
+<div class="header-push"></div>
+
+
+<div ng-show="!heroesGroup.length" class="loading" ng-animate="'animate'">
+    loading
+</div>
+
+<div ng-repeat="heroes in heroesGroup" class="hero-group" ng-show="group == $index" ng-hide="group != $index" ng-animate="'animate'">
+    <div ng-repeat="(name, hero) in heroes" class="hero-preview" ng-click="openHero(name)">
+        <img ng-src="http://media.steampowered.com/apps/dota2/images/heroes/{{name}}_hphover.png">
+    </div>
+</div>
