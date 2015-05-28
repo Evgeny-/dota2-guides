@@ -80,15 +80,30 @@
          return (bySkillResult = res);
       }
 
+      window.callbackInfo = function (res) {
+         info = res;
+         counting();
+      };
+
+      window.callbackHeroes = function (res) {
+         heroes = res.herodata;
+         counting();
+      };
+
+      window.callbackAbilities = function (res) {
+         abilities = res.abilitydata;
+         counting();
+      };
+
       return {
          load : function() {
-            $http.jsonp('http://www.dota2.com/jsfeed/heropickerdata?l=en&callback=JSON_CALLBACK')
+            $http.jsonp('http://www.dota2.com/jsfeed/heropickerdata?l=en&callback=callbackInfo')
                .success(this.info);
 
-            $http.jsonp('http://www.dota2.com/jsfeed/heropediadata?l=en&feeds=herodata&callback=JSON_CALLBACK')
+            $http.jsonp('http://www.dota2.com/jsfeed/heropediadata?l=en&feeds=herodata&callback=callbackHeroes')
                .success(this.heroes);
 
-            $http.jsonp('http://www.dota2.com/jsfeed/abilitydata?l=en&callback=JSON_CALLBACK')
+            $http.jsonp('http://www.dota2.com/jsfeed/abilitydata?l=en&callback=callbackAbilities')
                .success(this.abilities);
          },
          info : function(data) {
@@ -146,11 +161,11 @@
 
          $scope.setGroup = function(group) {
             window.location = '#/heroes/' + group;
-         }
+         };
 
          $scope.openHero = function (hero) {
             window.location = '#/hero/' + hero;
-         }
+         };
 
       }]
    );
