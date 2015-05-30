@@ -44,7 +44,7 @@
              heroAbilities = Object.keys(abilities),
              res = {};
 
-         while(--len) {
+         while(len--) {
             var hero = heroNames[len],
                 heroAbiName = (hero === 'sand_king') ? 'sandking' : hero;
 
@@ -97,27 +97,12 @@
 
       return {
          load : function() {
-            $http.jsonp('http://www.dota2.com/jsfeed/heropickerdata?l=en&callback=callbackInfo')
-               .success(this.info);
-
-            $http.jsonp('http://www.dota2.com/jsfeed/heropediadata?l=en&feeds=herodata&callback=callbackHeroes')
-               .success(this.heroes);
-
-            $http.jsonp('http://www.dota2.com/jsfeed/abilitydata?l=en&callback=callbackAbilities')
-               .success(this.abilities);
+            $http.jsonp('http://www.dota2.com/jsfeed/heropickerdata?l=en&callback=callbackInfo');
+            $http.jsonp('http://www.dota2.com/jsfeed/heropediadata?l=en&feeds=herodata&callback=callbackHeroes');
+            $http.jsonp('http://www.dota2.com/jsfeed/abilitydata?l=en&callback=callbackAbilities');
          },
          info : function(data) {
             info = data;
-            counting();
-         },
-
-         heroes : function(data) {
-            heroes = data.herodata;
-            counting();
-         },
-
-         abilities : function(data) {
-            abilities = data.abilitydata;
             counting();
          },
 
